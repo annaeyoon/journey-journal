@@ -114,10 +114,10 @@
             document.getElementById('fileInput').addEventListener('change', handleFileSelect);
 
             function saveMessages() {
-                sessionStorage.setItem('message0', document.getElementById('message0').value);
-                sessionStorage.setItem('message1', document.getElementById('message1').value);
-                sessionStorage.setItem('message2', document.getElementById('message2').value);
-                sessionStorage.setItem('message3', document.getElementById('message3').value);
+                sessionStorage.setItem('storedmessage0', document.getElementById('message0').value);
+                sessionStorage.setItem('storedmessage1', document.getElementById('message1').value);
+                sessionStorage.setItem('storedmessage2', document.getElementById('message2').value);
+                sessionStorage.setItem('storedmessage3', document.getElementById('message3').value);
             }
 
             // Restore the messages when the page loads
