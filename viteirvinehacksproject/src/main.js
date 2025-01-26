@@ -86,11 +86,6 @@ export async function chat(input, conversationContext) {
                 const messageValue = `${item.activity} (${item.price}): ${item.description}`;
                 sessionStorage.setItem(messageKey, messageValue);
               });
-              //sessionStorage.setItem('itinerary', JSON.stringify(itinerary));
-              // jsonIt.vacation.itinerary.forEach(item => {
-              //   console.log(item.activity);  // Print the activity name
-              // });
-              //jsonItinerary(itinerary);
             } catch (error) {
               console.error("Error parsing JSON:", error);
             }
