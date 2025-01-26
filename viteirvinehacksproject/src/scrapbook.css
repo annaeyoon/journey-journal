@@ -110,6 +110,12 @@ input[type="text"], textarea {
     transition: transform 0.3s ease, filter 1s ease;;
 }
 
+#pencil:hover {
+    transform: scale(1.03);
+    opacity: 100%;
+    filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
+}
+
 #postitnote1 {
     position: absolute;
     left: 13%;
