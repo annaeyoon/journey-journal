@@ -68,14 +68,28 @@ export async function chat(input, conversationContext) {
       for (var message of conversationContext.messages) {
         if (message.role === "assistant") {
           if (message.content.includes("JSON ITINERARY")) {
+            
             const jsonString = message.content.split("JSON ITINERARY")[1].trim();
-            message.content = message.content.split("JSON ITINERARY")[0].trim();
+            const lastBraceIndex = jsonString.lastIndexOf('}');
+
+            // Extract the string up to the last closing brace
+            const trimmedString = jsonString.slice(0, lastBraceIndex + 1);
+            const endString = jsonString.slice(lastBraceIndex + 1,);
+            console.log(jsonString);
+            message.content = message.content.split("JSON ITINERARY")[0].trim() + endString;
             
             try {
               // Parse the extracted JSON
-              const itinerary = JSON.parse(jsonString);
-              console.log("Extracted Itinerary:", itinerary);
-              sessionStorage.setItem('itinerary', JSON.stringify(itinerary));
+              const itineraryData = JSON.parse(trimmedString);
+              itineraryData.itinerary.forEach((item, index) => {
+                const messageKey = `storedmessage${index}`;
+                const messageValue = `${item.activity} (${item.price}): ${item.description}`;
+                sessionStorage.setItem(messageKey, messageValue);
+              });
+              //sessionStorage.setItem('itinerary', JSON.stringify(itinerary));
+              // jsonIt.vacation.itinerary.forEach(item => {
+              //   console.log(item.activity);  // Print the activity name
+              // });
               //jsonItinerary(itinerary);
             } catch (error) {
               console.error("Error parsing JSON:", error);

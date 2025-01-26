@@ -16,8 +16,8 @@
             <input type="file" id="imageUpload" accept="image/*">
 
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            <label for="message0">Message:</label>
+            <textarea id="message0" name="message" rows="4" cols="50"></textarea>
             <label for="message1">Message:</label>
             <textarea id="message1" name="message" rows="4" cols="50"></textarea>
             <label for="message2">Message:</label>
@@ -100,7 +100,7 @@
         
             document.addEventListener('DOMContentLoaded', () => {
                 document.querySelectorAll('.polaroid').forEach((element) => {
-                    const savedImage = localStorage.getItem(element.id);
+                    const savedImage = sessionStorage.getItem(element.id);
                     if (savedImage) {
                         const targetImg = element.querySelector('img');
                         if (targetImg) {
@@ -113,30 +113,30 @@
             document.getElementById('fileInput').addEventListener('change', handleFileSelect);
 
             function saveMessages() {
-                localStorage.setItem('message', document.getElementById('message').value);
-                localStorage.setItem('message1', document.getElementById('message1').value);
-                localStorage.setItem('message2', document.getElementById('message2').value);
-                localStorage.setItem('message3', document.getElementById('message3').value);
+                sessionStorage.setItem('message0', document.getElementById('message0').value);
+                sessionStorage.setItem('message1', document.getElementById('message1').value);
+                sessionStorage.setItem('message2', document.getElementById('message2').value);
+                sessionStorage.setItem('message3', document.getElementById('message3').value);
             }
 
             // Restore the messages when the page loads
             function restoreMessages() {
-                const message = localStorage.getItem('message');
-                if (message) {
-                    document.getElementById('message').value = message;
+                const message0 = sessionStorage.getItem('message0');
+                if (message0) {
+                    document.getElementById('message0').value = message0;
                 }
 
-                const message1 = localStorage.getItem('message1');
+                const message1 = sessionStorage.getItem('message1');
                 if (message1) {
                     document.getElementById('message1').value = message1;
                 }
 
-                const message2 = localStorage.getItem('message2');
+                const message2 = sessionStorage.getItem('message2');
                 if (message2) {
                     document.getElementById('message2').value = message2;
                 }
 
-                const message3 = localStorage.getItem('message3');
+                const message3 = sessionStorage.getItem('message3');
                 if (message3) {
                     document.getElementById('message3').value = message3;
                 }
@@ -153,19 +153,19 @@
 
 
             document.getElementById('pencil').addEventListener('click', () => {
-                const message = localStorage.getItem('message');
-                const message1 = localStorage.getItem('message1');
-                const message2 = localStorage.getItem('message2');
-                const message3 = localStorage.getItem('message3');
+                const message0 = sessionStorage.getItem('storedmessage0');
+                const message1 = sessionStorage.getItem('storedmessage1');
+                const message2 = sessionStorage.getItem('storedmessage2');
+                const message3 = sessionStorage.getItem('storedmessage3');
 
-                if (message) document.getElementById('message').value = message;
+                if (message0) document.getElementById('message0').value = message0;
                 if (message1) document.getElementById('message1').value = message1;
                 if (message2) document.getElementById('message2').value = message2;
                 if (message3) document.getElementById('message3').value = message3;
             });
 
             document.getElementById('eraser').addEventListener('click', () => {
-                if (message) document.getElementById('message').value = "";
+                if (message0) document.getElementById('message0').value = "";
                 if (message1) document.getElementById('message1').value = "";
                 if (message2) document.getElementById('message2').value = "";
                 if (message3) document.getElementById('message3').value = "";
