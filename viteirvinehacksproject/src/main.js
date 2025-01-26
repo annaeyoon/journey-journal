@@ -76,7 +76,8 @@ export async function chat(input, conversationContext) {
               // Parse the extracted JSON
               const itinerary = JSON.parse(jsonString);
               console.log("Extracted Itinerary:", itinerary);
-              jsonItinerary(itinerary);
+              sessionStorage.setItem('itinerary', JSON.stringify(itinerary));
+              //jsonItinerary(itinerary);
             } catch (error) {
               console.error("Error parsing JSON:", error);
             }
