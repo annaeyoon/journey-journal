@@ -32,9 +32,9 @@ body {
 
 #initial-book {
   position: fixed;
-  height: 55%;
-  bottom: 8%;
-  right: 50%;
+  height: 600%;
+  /* bottom: 8%;
+  right: 50%; */
   transition: transform 0.3s ease;
   opacity: 95%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
@@ -66,18 +66,17 @@ body {
 
 .login {
   position: absolute;
-  bottom: 8%;
-  right: 50%;
-  transform: translate(-240px, -330px);
+  bottom: 45%;
+  right: 60%;
+  transform: translate(0vw, 0);
 }
 
 #user {
-  position: absolute;
+  position: relative;
   font-size: xx-large;
   width: 150px;
-  right: calc(50vw + 0);
   z-index: 1000;
-  transform: rotate(-12deg);
+  transform: translate(30%, 80%) rotate(-12deg);
   /* background-color: transparent;
   border: transparent;
   outline: transparent; */
