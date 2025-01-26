@@ -40,12 +40,6 @@ body {
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 }
 
-#initial-book:hover {
-  transform: scale(1.03);
-  opacity: 100%;
-  filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
-}
-
 
 #initial-ipod {
   position:absolute;
@@ -56,6 +50,12 @@ body {
   opacity: 95%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 
+}
+
+#initial-ipod:hover {
+  transform: scale(1.03);
+  opacity: 100%;
+  filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 }
 
 .login:hover {

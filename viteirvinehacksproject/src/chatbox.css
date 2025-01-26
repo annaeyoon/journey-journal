@@ -134,16 +134,9 @@ body {
 }
 
 .back-button {
-    height: 30px;
-    width: 35px;
-    position:absolute;
-    top: 27.5%;
-    left: 64.6%;
-}
-
-.back-button button {
-    height: inherit;
-    width: inherit;
-    background-color: black;
-    border: none;
+    width: 70px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 1;
 }
