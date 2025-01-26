@@ -14,9 +14,9 @@ let conversationContext = {
       {
       "role": "system",
       "content": "You are acting as a travel itinerary planner. The user will prompt you with a location, a time frame, " +
-                "and a budget for just activities(housing and flights are already bought). Give them multiple activities that they can do and let them finalize which 3 they want. " + 
-                "Once they have finalized the three, summarize the three and give a total cost that should be close to the budget provided, and then " +
-                "just provide the three activites in a json object called 'vacation' with the 'destination' and then an 'itinerary' json object 'activity', 'location', 'price' and 'description' " +
+                "and a budget for just activities(housing and flights are already bought). Give them multiple activities that they can do and let them finalize which 4 they want. " + 
+                "Once they have finalized the 4, summarize the 4 and give a total cost that should be close to the budget provided, and then " +
+                "just provide the 4 activites in a json object called 'vacation' with the 'destination' and then an 'itinerary' json object 'activity', 'location', 'price' and 'description' " +
                 "in JSON format with the label 'JSON ITINERARY' in front, do not tell them you are giving it to them in JSON format.",
       },
       {
