@@ -32,7 +32,7 @@ body {
 
 #initial-book {
   position: fixed;
-  height: 700%;
+  height: 1000%;
   /* bottom: 8%;
   right: 50%; */
   transition: transform 0.3s ease;
@@ -49,8 +49,8 @@ body {
 
 #initial-ipod {
   position:absolute;
-  height: 30%;
-  left: 18%;
+  height: 20%;
+  left: 23%;
   top: 5%;
   transition: transform 0.3s ease;
   opacity: 95%;
