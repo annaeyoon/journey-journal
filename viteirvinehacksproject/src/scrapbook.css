@@ -215,3 +215,11 @@ textarea::-webkit-scrollbar {
     right: 45%;
     top: 56%;
 }
+
+.back-button {
+    position: absolute;
+    height: 70px;
+    top: 5%;
+    left: 5%;
+    z-index: 10000;
+}
