@@ -12,6 +12,10 @@
     <body>
         <div class="container">
 
+            <input type="file" id="fileInput" style="display:none" onchange="handleFileSelect(event)">
+            <input type="file" id="imageUpload" accept="image/*">
+
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" cols="50"></textarea>
             <label for="message1">Message:</label>
@@ -20,10 +24,10 @@
             <textarea id="message2" name="message" rows="4" cols="50"></textarea>
             <label for="message3">Message:</label>
             <textarea id="message3" name="message" rows="4" cols="50"></textarea>
-            <img src="public/assets/postit.png" class="polaroid" id="postitnote1">
-            <img src="public/assets/postit.png" class="polaroid" id="postitnote2">
-            <img src="public/assets/postit.png" class="polaroid" id="postitnote3">
-            <img src="public/assets/postit.png" class="polaroid" id="postitnote4">
+            <img src="public/assets/postit.png" class="postit" id="postitnote1">
+            <img src="public/assets/postit.png" class="postit" id="postitnote2">
+            <img src="public/assets/postit.png" class="postit" id="postitnote3">
+            <img src="public/assets/postit.png" class="postit" id="postitnote4">
         
             <img src="public/assets/pen.png" id="pen">
             <img src="public/assets/pencil.png" id="pencil">
@@ -47,6 +51,64 @@
 
             <img src="public/assets/scrapbookpagebackground.png" alt="Background" id="full-screen-scrapbook">
         </div>
-        <script src="script.js"></script>
+        <script>
+            let selectedPolaroid = null; // To track the selected polaroid
+        
+            document.querySelectorAll('.polaroid').forEach((element) => {
+                element.addEventListener('click', function () {
+                    selectedPolaroid = this;
+                    document.getElementById('fileInput').click();
+                });
+            });
+        
+            function handleFileSelect(event) {
+                const file = event.target.files[0]; 
+
+                if (file) {
+                    const reader = new FileReader();
+                    
+                    reader.onloadend = function() {
+                        // Base64 string is in reader.result
+                        const base64Image = reader.result;
+                        
+                        const polaroidOne = document.getElementById("img1");
+                        const polaroidTwo = document.getElementById("img2");
+                        const polaroidThree = document.getElementById("img3");
+                        const polaroidFour = document.getElementById("img4");
+                        if (selectedPolaroid.id === "polaroid-one") {
+                            polaroidOne.src = base64Image;
+                        }
+                        else if (selectedPolaroid.id === "polaroid-two") {
+                            polaroidTwo.src = base64Image;
+                        }
+                        else if (selectedPolaroid.id === "polaroid-three") {
+                            polaroidThree.src = base64Image;
+                        }
+                        else if (selectedPolaroid.id === "polaroid-four") {
+                            polaroidFour.src = base64Image;
+                        }
+                    };
+
+                    // Read the file as a Base64 encoded data URL
+                    reader.readAsDataURL(file);
+                
+            }
+
+            }
+        
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.polaroid').forEach((element) => {
+                    const savedImage = localStorage.getItem(element.id);
+                    if (savedImage) {
+                        const targetImg = element.querySelector('img');
+                        if (targetImg) {
+                            targetImg.src = savedImage; // Restore the saved image
+                        }
+                    }
+                });
+            });
+        
+            document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+        </script>
     </body>
 </html>

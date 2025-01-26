@@ -117,6 +117,21 @@ input[type="text"], textarea {
     filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 }
 
+.postit {
+    position:absolute;
+    height: 34%;
+    max-width: 13%;
+    z-index: 3;
+    transition: transform 0.3s ease, filter 1s ease;;
+    opacity: 95%;
+}
+
+.postit:hover {
+    transform: scale(1.03);
+    opacity: 100%;
+    filter: drop-shadow(4px 4px 10px rgba(84, 39, 103, 0.5));
+}
+
 #postitnote1 {
     position: absolute;
     left: 13%;
