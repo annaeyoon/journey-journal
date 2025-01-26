@@ -31,10 +31,10 @@ body {
 }
 
 #initial-book {
-  position: inherit;
+  position: fixed;
   height: 55%;
-  /* bottom: 5%;
-  right: 42%; */
+  bottom: 8%;
+  right: 50%;
   transition: transform 0.3s ease;
   opacity: 95%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
