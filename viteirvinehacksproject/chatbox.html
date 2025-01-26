@@ -10,7 +10,7 @@
 <body>
     <!-- Add a back button here -->
     <div class="back-button">
-        <button onclick="goBackToMain()"></button>
+        <button id="back-button-1"></button>
     </div>
 
     <div class="chatbox-container" id="chats">
@@ -28,7 +28,7 @@
         <form action="#" class="chat-message-form">
             <textarea cols="40" rows="3" placeholder="Enter your message here..." maxlength="150" class="chat-input" id="chat-input"></textarea>
             <div class="chat-input-submit">
-                <button type="submit" style="font-size:26px" id="chat-submit" onclick="sendMessage()"><i class="material-icons">send</i></button>
+                <button type="submit" style="font-size:26px" id="chat-submit"><i class="material-icons">send</i></button>
             </div>
         </form>
     </div>
