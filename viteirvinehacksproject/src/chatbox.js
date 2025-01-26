@@ -53,7 +53,7 @@ const createMessage = (message, dir) => {
     return messageOuter;
 }
 
-async function sendMessage() {
+export async function sendMessage() {
     var textarea = document.getElementById("chat-input");
     var content = textarea.value;
     // check for empty
