@@ -42,6 +42,7 @@ body {
 .polaroid {
     position:absolute;
     height: 34%;
+    max-width: 13%;
     z-index: 3;
     transition: transform 0.3s ease, filter 1s ease;;
     opacity: 95%;
@@ -154,27 +155,33 @@ textarea::-webkit-scrollbar {
     display: none; /* Hides scrollbar in Chrome, Safari, and newer Edge */
 }
 
+
 .polaroid-img {
     position: absolute;
-    height: 20%;
+    height: 18%;
+    max-width: 9%;
+    object-fit: cover;
     z-index: 1;
     transition: transform 0.3s ease, filter 1s ease;;
-    opacity: 95%;
 }
 
-.img-container {
-    display: block;
-    max-width: 80%;
-}
-
-.img-container-container {
-    max-width: 80%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
 #img1 {
-    top: 16%;
-    left: 14%;
+    top: 18%;
+    left: 15%;
+}
+
+#img2 {
+    right: 30%;
+    top: 18%;
+}
+
+#img3 {
+    left: 28%;
+    top: 58%;
+}
+
+#img4 {
+    right: 45%;
+    top: 56%;
 }

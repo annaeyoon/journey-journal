@@ -41,4 +41,4 @@ app.post('/upload', upload.single('file'), (req, res) => {
     uploadPicture();
   
   });
-  
+
