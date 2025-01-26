@@ -1,6 +1,5 @@
 import Groq from 'groq-sdk';
 import mysql from 'mysql2';
-import session from ''
 
 // Create a new instance of the Groq class
 const groq = new Groq({ apiKey: import.meta.env.VITE_GROQ_API_KEY, dangerouslyAllowBrowser: true });
