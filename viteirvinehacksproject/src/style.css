@@ -35,7 +35,7 @@ body {
   height: 1000%;
   /* bottom: 8%;
   right: 50%; */
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
   opacity: 95%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 }
@@ -58,7 +58,7 @@ body {
 
 }
 
-#initial-ipod:hover {
+.login:hover {
   transform: scale(1.03);
   opacity: 100%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
@@ -69,6 +69,7 @@ body {
   bottom: 70%;
   right: 60%;
   transform: translate(0vw, 0);
+  transition: transform 0.3s ease;
 }
 
 #user {
