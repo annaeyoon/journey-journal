@@ -72,8 +72,6 @@ export function goBackToMain() {
     window.location.href = 'index.html';
 }
 
-const buttonFix = document.getElementById("chat-submit");
-buttonFix.addEventListener("click", sendMessage);
+document.getElementById("chat-submit").addEventListener("click", sendMessage);
 
-const backButtonFix = document.getElementById("back-button-1");
-backButtonFix.addEventListener("click", goBackToMain);
+document.getElementById("back-button-1").addEventListener("click", goBackToMain);
