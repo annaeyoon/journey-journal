@@ -61,8 +61,8 @@ input[type="text"], textarea {
     position: absolute;
     z-index: 5;
     background: transparent;
-    left: 30%;
-    top: 20%;
+    left: 29%;
+    top: 17%;
     min-height: 150px;
     font-family: 'Pangolin', serif;
     letter-spacing: 1.2px;
@@ -72,18 +72,18 @@ input[type="text"], textarea {
 
 
 #message1 {
-    left: 45%;
-    top: 20%;
+    left: 46%;
+    top: 18%;
 }
 
 #message2 {
-    left: 60%;
+    left: 59%;
     top: 60%;
 }
 
 #message3 {
     left: 15%;
-    top: 58%;
+    top: 60%;
 }
 
 #pen {
