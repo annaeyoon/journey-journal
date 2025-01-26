@@ -33,8 +33,6 @@ body {
 #initial-book {
   position: fixed;
   height: 630%;
-  /* bottom: 8%;
-  right: 50%; */
   transition: transform 0.3s ease;
   opacity: 95%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
@@ -77,7 +75,7 @@ body {
   width: 150px;
   z-index: 1000;
   transform: translate(35%, 85%) rotate(-12deg);
-  /* background-color: transparent;
+  background-color: transparent;
   border: transparent;
-  outline: transparent; */
+  outline: transparent;
 }
