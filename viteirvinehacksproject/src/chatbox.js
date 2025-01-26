@@ -58,19 +58,22 @@ export async function sendMessage() {
     var content = textarea.value;
     // check for empty
     if (content.trim() == "") {
-        console.log("Empty!");
-    } else {
-        createMessage(content, "right");
+        textarea.value = "";
+        return;
     }
+    createMessage(content, "right");
     textarea.value = "";
-
     conversationContext = await chat(content, conversationContext);
-
     createMessage(conversationContext.messages.at(-1).content, "left");
-
     textarea.focus();
 }
 
 export function goBackToMain() {
-    window.location.href = '../index.html';
+    window.location.href = 'index.html';
 }
+
+const buttonFix = document.getElementById("chat-submit");
+buttonFix.addEventListener("click", sendMessage);
+
+const backButtonFix = document.getElementById("back-button-1");
+backButtonFix.addEventListener("click", goBackToMain);
