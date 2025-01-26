@@ -81,5 +81,4 @@ input[type="text"], textarea {
     right: 0%;
     z-index: 1;
     transition: transform 0.3s ease, filter 1s ease;;
-    opacity: 95%;
 }
