@@ -17,24 +17,26 @@ body {
 }
 
 #polaroid-one {
-    left: 13%;
-    top: 10%;
+    left: 14%;
+    top: 11%;
 }
 
 #polaroid-two {
-    right: 43%;
-    top: 10%;
+    right: 30%;
+    top: 15%;
+    height: 28%;
 }
 
 #polaroid-three {
-    left: 22%;
-    top: 50%;
-    height:38%;
+    left: 28%;
+    top: 55%;
+    height: 28%;
 }
 
 #polaroid-four {
-    right: 40%;
+    right: 43%;
     top: 50%;
+    height: 35%;
 }
 
 .polaroid {
@@ -66,13 +68,15 @@ input[type="text"], textarea {
     line-height: 15px;
 }
 
+
+
 #message1 {
-    left: 58%;
+    left: 45%;
     top: 20%;
 }
 
 #message2 {
-    left: 58%;
+    left: 60%;
     top: 60%;
 }
 
@@ -104,4 +108,14 @@ input[type="text"], textarea {
     bottom: 10%;
     z-index: 1;
     transition: transform 0.3s ease, filter 1s ease;;
+}
+
+textarea {
+    overflow: auto; /* Enables scrolling */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer and Edge */
+}
+
+textarea::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari, and newer Edge */
 }

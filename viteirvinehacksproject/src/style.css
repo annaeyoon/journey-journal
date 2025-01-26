@@ -31,10 +31,10 @@ body {
 }
 
 #initial-book {
-  position: inherit;
+  position: fixed;
   height: 55%;
-  /* bottom: 5%;
-  right: 42%; */
+  bottom: 8%;
+  right: 50%;
   transition: transform 0.3s ease;
   opacity: 95%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
@@ -65,18 +65,22 @@ body {
 }
 
 .login {
-  position: absolute;
+  position: relative;
   bottom: 5%;
 
 }
 
 #user {
   /* position: absolute; */
+  position: fixed;
+  bottom: 47%;
+  right: 55%;
   font-size: xx-large;
-  width: 150px;
+  width: 165px;
   z-index: 1000;
   transform: rotate(-12deg);
-  /* background-color: transparent;
+  background-color: transparent;
   border: transparent;
-  outline: transparent; */
+  outline: transparent;
+  text-align: center;
 }
