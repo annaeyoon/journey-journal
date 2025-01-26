@@ -3,7 +3,7 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
-    cursor: url(https://cur.cursors-4u.net/others/oth-5/oth510.png), auto !important;
+    /* cursor: url(https://cur.cursors-4u.net/others/oth-5/oth510.png), auto !important; */
 }
 
 #full-screen-scrapbook {
@@ -164,17 +164,21 @@ textarea::-webkit-scrollbar {
 
 .img-container {
     display: block;
-    max-width: 80%;
 }
 
 .img-container-container {
-    max-width: 80%;
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow:hidden;
+    max-width:20vh;
 }
-
 #img1 {
     top: 16%;
     left: 14%;
+    object-fit: cover;
+    max-width:20.8vh;
+    opacity:5%;
+    cursor:pointer;
+    pointer-events: auto;
 }
