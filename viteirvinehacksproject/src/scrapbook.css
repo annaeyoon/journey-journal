@@ -3,7 +3,7 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
-    /* cursor: url(https://cur.cursors-4u.net/others/oth-5/oth510.png), auto !important; */
+    cursor: url(https://cur.cursors-4u.net/others/oth-5/oth510.png), auto !important;
 }
 
 #full-screen-scrapbook {
@@ -42,6 +42,7 @@ body {
 .polaroid {
     position:absolute;
     height: 34%;
+    max-width: 13%;
     z-index: 3;
     transition: transform 0.3s ease, filter 1s ease;;
     opacity: 95%;
@@ -154,31 +155,33 @@ textarea::-webkit-scrollbar {
     display: none; /* Hides scrollbar in Chrome, Safari, and newer Edge */
 }
 
+
 .polaroid-img {
     position: absolute;
-    height: 20%;
+    height: 18%;
+    max-width: 9%;
+    object-fit: cover;
     z-index: 1;
     transition: transform 0.3s ease, filter 1s ease;;
-    opacity: 95%;
 }
 
-.img-container {
-    display: block;
-}
 
-.img-container-container {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow:hidden;
-    max-width:20vh;
-}
 #img1 {
-    top: 16%;
-    left: 14%;
-    object-fit: cover;
-    max-width:20.8vh;
-    opacity:5%;
-    cursor:pointer;
-    pointer-events: auto;
+    top: 18%;
+    left: 15%;
+}
+
+#img2 {
+    right: 30%;
+    top: 18%;
+}
+
+#img3 {
+    left: 28%;
+    top: 58%;
+}
+
+#img4 {
+    right: 45%;
+    top: 56%;
 }
