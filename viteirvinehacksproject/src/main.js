@@ -28,6 +28,23 @@ export async function chat(input, conversationContext) {
         "content": assistantMessage,
       });
 
+      for (var message of conversationContext.messages) {
+        if (message.role === "assistant") {
+          if (message.content.includes("JSON ITINERARY")) {
+            const jsonString = message.content.split("JSON ITINERARY")[1].trim();
+            message.content = message.content.split("JSON ITINERARY")[0].trim();
+            
+            try {
+              // Parse the extracted JSON
+              const itinerary = JSON.parse(jsonString);
+              console.log("Extracted Itinerary:", itinerary);
+            } catch (error) {
+              console.error("Error parsing JSON:", error);
+            }
+          }
+        }
+      }
+
       return conversationContext;
 
     } catch (error) {
