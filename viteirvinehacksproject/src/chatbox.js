@@ -71,7 +71,6 @@ async function sendMessage() {
     textarea.focus();
 }
 
-function goBackToMain() {
-    console.log("here");
-    window.location.href = '/index.html';
+export function goBackToMain() {
+    window.location.href = '../index.html';
 }
