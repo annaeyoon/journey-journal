@@ -109,6 +109,45 @@
             });
         
             document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+            function saveMessages() {
+                localStorage.setItem('message', document.getElementById('message').value);
+                localStorage.setItem('message1', document.getElementById('message1').value);
+                localStorage.setItem('message2', document.getElementById('message2').value);
+                localStorage.setItem('message3', document.getElementById('message3').value);
+            }
+
+            // Restore the messages when the page loads
+            function restoreMessages() {
+                const message = localStorage.getItem('message');
+                if (message) {
+                    document.getElementById('message').value = message;
+                }
+
+                const message1 = localStorage.getItem('message1');
+                if (message1) {
+                    document.getElementById('message1').value = message1;
+                }
+
+                const message2 = localStorage.getItem('message2');
+                if (message2) {
+                    document.getElementById('message2').value = message2;
+                }
+
+                const message3 = localStorage.getItem('message3');
+                if (message3) {
+                    document.getElementById('message3').value = message3;
+                }
+            }
+
+            // Attach event listeners to the text areas
+            document.getElementById('message').addEventListener('input', saveMessages);
+            document.getElementById('message1').addEventListener('input', saveMessages);
+            document.getElementById('message2').addEventListener('input', saveMessages);
+            document.getElementById('message3').addEventListener('input', saveMessages);
+
+            // Restore messages when the page loads
+            document.addEventListener('DOMContentLoaded', restoreMessages);
         </script>
     </body>
 </html>
