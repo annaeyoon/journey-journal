@@ -31,6 +31,8 @@
         
             <img src="public/assets/pen.png" id="pen">
             <img src="public/assets/pencil.png" id="pencil">
+            <img src="public/assets/eraser.png" id="eraser">
+
 
             <img src="public/assets/polaroidlavender.png" class="polaroid" id="polaroid-one">
             <div class="polaroid-size">
@@ -148,6 +150,28 @@
 
             // Restore messages when the page loads
             document.addEventListener('DOMContentLoaded', restoreMessages);
+
+
+            document.getElementById('pencil').addEventListener('click', () => {
+                const message = localStorage.getItem('message');
+                const message1 = localStorage.getItem('message1');
+                const message2 = localStorage.getItem('message2');
+                const message3 = localStorage.getItem('message3');
+
+                if (message) document.getElementById('message').value = message;
+                if (message1) document.getElementById('message1').value = message1;
+                if (message2) document.getElementById('message2').value = message2;
+                if (message3) document.getElementById('message3').value = message3;
+            });
+
+            document.getElementById('eraser').addEventListener('click', () => {
+                if (message) document.getElementById('message').value = "";
+                if (message1) document.getElementById('message1').value = "";
+                if (message2) document.getElementById('message2').value = "";
+                if (message3) document.getElementById('message3').value = "";
+                
+                saveMessages();
+            });
         </script>
     </body>
 </html>
