@@ -77,7 +77,8 @@ body {
   width: 150px;
   z-index: 1000;
   transform: translate(35%, 85%) rotate(-12deg);
-  /* background-color: transparent;
+  background-color: transparent;
   border: transparent;
-  outline: transparent; */
+  outline: transparent;
+  font-family: 'Pangolin', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
