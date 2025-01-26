@@ -143,6 +143,6 @@ body {
 .back-button button {
     height: inherit;
     width: inherit;
-    background-color: transparent;
+    background-color: black;
     border: none;
 }

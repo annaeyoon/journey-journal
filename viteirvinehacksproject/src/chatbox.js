@@ -72,5 +72,6 @@ async function sendMessage() {
 }
 
 function goBackToMain() {
-    window.location.href = 'index.html';
+    console.log("here");
+    window.location.href = '/index.html';
 }
