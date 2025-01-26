@@ -153,3 +153,28 @@ textarea {
 textarea::-webkit-scrollbar {
     display: none; /* Hides scrollbar in Chrome, Safari, and newer Edge */
 }
+
+.polaroid-img {
+    position: absolute;
+    height: 20%;
+    z-index: 1;
+    transition: transform 0.3s ease, filter 1s ease;;
+    opacity: 95%;
+}
+
+.img-container {
+    display: block;
+    max-width: 80%;
+}
+
+.img-container-container {
+    max-width: 80%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#img1 {
+    top: 16%;
+    left: 14%;
+}
