@@ -14,3 +14,10 @@ document.getElementById("initial-ipod").addEventListener("click", () => {
         console.log("Music is paused");
     }
 });
+
+function startSession(event) {
+    if(event.key == 'Enter') {
+        document.getElementById("initial-book").style.display = "none";
+        document.getElementById("book2").style.display = "block";
+    }
+}

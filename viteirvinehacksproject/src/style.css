@@ -40,6 +40,16 @@ body {
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 }
 
+#book2 {
+  position: fixed;
+  bottom: -1050%;
+  right: -80%;
+  height: 1100%;
+  opacity: 95%;
+  z-index: 1;
+  filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
+  display: none;
+}
 
 #initial-ipod {
   position:absolute;
