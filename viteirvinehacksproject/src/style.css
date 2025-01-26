@@ -19,7 +19,6 @@ body {
   position:absolute;
   height: 55%;
   right: 3%;
-  z-index: 1;
   transition: transform 0.3s ease;
   opacity: 95%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
@@ -32,11 +31,10 @@ body {
 }
 
 #initial-book {
-  position:absolute;
+  position: inherit;
   height: 55%;
-  bottom: 5%;
-  right: 42%;
-  z-index: 1;
+  /* bottom: 5%;
+  right: 42%; */
   transition: transform 0.3s ease;
   opacity: 95%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
@@ -54,7 +52,6 @@ body {
   height: 30%;
   left: 18%;
   top: 5%;
-  z-index: 1;
   transition: transform 0.3s ease;
   opacity: 95%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
@@ -65,4 +62,21 @@ body {
   transform: scale(1.03);
   opacity: 100%;
   filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
+}
+
+.login {
+  position: absolute;
+  bottom: 5%;
+
+}
+
+#user {
+  /* position: absolute; */
+  font-size: xx-large;
+  width: 150px;
+  z-index: 1000;
+  transform: rotate(-12deg);
+  /* background-color: transparent;
+  border: transparent;
+  outline: transparent; */
 }
