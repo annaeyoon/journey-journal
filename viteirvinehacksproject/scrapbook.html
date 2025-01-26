@@ -143,10 +143,10 @@
             }
 
             // Attach event listeners to the text areas
-            document.getElementById('message').addEventListener('input', saveMessages);
-            document.getElementById('message1').addEventListener('input', saveMessages);
-            document.getElementById('message2').addEventListener('input', saveMessages);
-            document.getElementById('message3').addEventListener('input', saveMessages);
+            // document.getElementById('message').addEventListener('input', saveMessages);
+            // document.getElementById('message1').addEventListener('input', saveMessages);
+            // document.getElementById('message2').addEventListener('input', saveMessages);
+            // document.getElementById('message3').addEventListener('input', saveMessages);
 
             // Restore messages when the page loads
             document.addEventListener('DOMContentLoaded', restoreMessages);
@@ -169,7 +169,9 @@
                 if (message1) document.getElementById('message1').value = "";
                 if (message2) document.getElementById('message2').value = "";
                 if (message3) document.getElementById('message3').value = "";
-                
+            });
+
+            document.getElementById('pen').addEventListener('click', () => {
                 saveMessages();
             });
         </script>
